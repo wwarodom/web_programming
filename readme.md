@@ -11,5 +11,4 @@ https://werapun.com
 __Linkedin:__
 https://www.linkedin.com/in/werapun/
 
-
-<p style='text-align: right; font-style: italic'> Last updated: 15 Aug 2024</p>
+__Last updated:__ 15 Aug 2024
