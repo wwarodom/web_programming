@@ -3,6 +3,12 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 header, footer { 
     font-size: larger;
     padding: 0.8em;
@@ -22,8 +28,7 @@ section {
     border-radius: 0.6em;
 }
 
-.card_image {
-    /* margin: auto; */
+.card_image { 
     width: 15em;
     height: 15em;
     border: 2px solid black;
@@ -39,8 +44,37 @@ h2 {
     margin-top: 1em;
 }
 
+
+
 ul {
     margin-bottom: 1em;
+    list-style-type: none;
+    margin: 1em;
+}
+
+ul li {
+    display: inline;
+    padding: 0.3em 0.5em;
+    margin: 0.5em; 
+    border: 2px solid black;
+    border-radius: 4px;
+    background: rgb(160, 210, 236);
+    box-shadow: 3px 3px 2px black;
+}
+
+ul li:first-child {
+    background: red;
+    color: white;
+}
+
+li:hover, a:hover {
+    background: blue;
+    color: white;
+} 
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 footer {

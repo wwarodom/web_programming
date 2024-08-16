@@ -4,6 +4,6 @@
         :hover text-decoration font weight
         color palette: https://coolors.co/palettes/trending
 3. Set font from https://fonts.google.com
-4. Change logo (Flaticion) + background linear-gradient(to rigth, src color, dest color)
-5. CSS position: relative, absolute, fixed (span in card image)
+4. Change logo (Flaticion) + background linear-gradient(to right, src color, dest color)
+5. CSS position: relative, absolute, fixed (span in card image), href=#id for dest id element
 6. Layout html form
