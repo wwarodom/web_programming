@@ -8,7 +8,7 @@ https://docs.google.com/document/d/1FN6uCB1dc5_h6EHpmwnJerfoEyW5UQ8KnbGgmSIpISw/
 __My site:__
 https://werapun.com
 
-__Linkined:__
+__Linkedin:__
 https://www.linkedin.com/in/werapun/
 
 
