@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed black;
+    min-height: 70vh;
+}
+
+.box {
+    width: 2em;
+    height: 2em;
+    background: lightcyan;
+    border: 2px solid blue;
+}
+
+.box:first-child {
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex-basis: 6em; */
+    flex: 1 0 6em;   
+}
+
+.box:last-child {
+    align-self: flex-start;
+    flex-grow: 1;
+}
