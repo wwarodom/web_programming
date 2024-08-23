@@ -1,15 +1,40 @@
+nav {
+    display: flex; 
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.menu_container {
+    display: flex;
+    gap: 0.8em;
+}
+
+/* .logo {
+    margin-right: auto;
+}
+
+.help {
+    margin-left: auto;
+}
+
+nav > div {
+    margin: 
+} */
+
 .container {
     display: flex;
     flex-direction: row; 
     justify-content: center;
     align-items: center;
+    align-content: flex-end;
     border: 2px dashed black;
     min-height: 70vh;
+    flex-wrap: wrap;
 }
 
 .box {
-    width: 2em;
-    height: 2em;
+    width: 12em;
+    height: 6em;
     background: lightcyan;
     border: 2px solid blue;
 }
@@ -18,10 +43,10 @@
     /* flex-grow: 1; */
     /* flex-shrink: 1; */
     /* flex-basis: 6em; */
-    flex: 1 0 6em;   
+    /* flex: 1 0 6em;     */
 }
-
+ 
 .box:last-child {
-    align-self: flex-start;
-    flex-grow: 1;
+    /* align-self: flex-start; */
+    /* flex-grow: 1;  */
 }

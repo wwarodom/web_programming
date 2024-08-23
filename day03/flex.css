@@ -8,20 +8,22 @@
 }
 
 .box {
-    width: 2em;
-    height: 2em;
+    width: 7em;
+    height: 8em;
     background: lightcyan;
     border: 2px solid blue;
 }
 
 .box:first-child {
-    /* flex-grow: 1; */
-    /* flex-shrink: 1; */
-    /* flex-basis: 6em; */
-    flex: 1 0 6em;   
+    /* flex-grow: 2; */
+    /* flex-shrink: 0; */
+    /* flex-basis: 0;   */
+    flex: 2 1 0;   
 }
 
 .box:last-child {
-    align-self: flex-start;
-    flex-grow: 1;
+    /* align-self: flex-start; */
+    /* flex-grow: 1;
+    flex-basis: 0; */
+    flex: 1 1 0;
 }
