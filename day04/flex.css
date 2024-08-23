@@ -1,4 +1,4 @@
-nav {
+nav, footer {
     display: flex; 
     justify-content: space-between;
     font-size: 1.5rem;
@@ -21,15 +21,32 @@ nav > div {
     margin: 
 } */
 
-.container {
+/* .container {
     display: flex;
     flex-direction: row; 
     justify-content: center;
     align-items: center;
     align-content: flex-end;
     border: 2px dashed black;
-    min-height: 70vh;
+    min-height: 80vh;
     flex-wrap: wrap;
+} */
+ 
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 40vh;
+}
+
+.row1 { 
+    background: lightskyblue; 
+    font-size: 2rem;
+}
+
+.row2 { 
+    background: lightgoldenrodyellow; 
+    font-size: 1.4rem;
 }
 
 .box {
