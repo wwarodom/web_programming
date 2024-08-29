@@ -1,0 +1,17 @@
+.percent {
+   width: 50%;
+   border: 2px dashed red;
+}
+
+.container {
+   width: 500px;
+   height: 300px;
+   border: 2px solid black;
+}
+
+.vwh {
+   width: 50vw;
+   height: 10vh;
+   border: 2px dashed green;
+}
+ 

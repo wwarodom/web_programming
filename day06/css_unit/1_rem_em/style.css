@@ -1,0 +1,32 @@
+* {
+    outline: 1px solid red !important;
+}
+
+/* rem depends on html element
+   1em or 1rem = 16px */
+html {
+    font-size: 32px;
+}
+ 
+.rem1 {
+    font-size: 1rem;
+}
+.em1 {
+    font-size: 1em;
+}
+
+.container {
+    font-size: 32px;
+}
+
+/* .rem2 depends on html font-size, ignore container font-size  */
+.rem2 {
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+/* 2em depends on .container font-size, ignore html font-size */
+.em2 {
+    font-size: 2em;
+    padding: 2em; 
+}
