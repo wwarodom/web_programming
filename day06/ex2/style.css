@@ -12,6 +12,15 @@ header, footer {
     margin: 0.8em;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header span {
+    margin-left: 0.5em;
+}
+
 .image-container { 
     padding: 0.5em;
 }
@@ -36,7 +45,6 @@ header, footer {
     .container {
         display: flex;
     }
-
     .card-hide {
         display: none;
     }
