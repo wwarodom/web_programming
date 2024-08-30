@@ -3,21 +3,26 @@
     color: white;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media screen and (max-width: 600px) {
+/* Extra small devices (phones, 400px and down) */
+@media screen and (max-width: 400px) {
     .example {
         background: red;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 400px) {
     .example {
         background: green;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 500px) {
+    .example {
+        background: blue;
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 

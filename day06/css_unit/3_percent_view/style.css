@@ -1,6 +1,16 @@
+* {
+   margin: 0;
+}
+
 .percent {
    width: 50%;
+   height: 50%;
    border: 2px dashed red;
+}
+.vwh {
+   width: 50vw;
+   height: 50vh;
+   border: 2px dashed green;
 }
 
 .container {
@@ -9,9 +19,4 @@
    border: 2px solid black;
 }
 
-.vwh {
-   width: 50vw;
-   height: 10vh;
-   border: 2px dashed green;
-}
  

@@ -1,11 +1,11 @@
 * {
-    outline: 1px solid red !important;
+    outline : 1px solid red;
 }
 
 /* rem depends on html element
    1em or 1rem = 16px */
 html {
-    font-size: 32px;
+    font-size: 16px;
 }
  
 .rem1 {
@@ -16,7 +16,7 @@ html {
 }
 
 .container {
-    font-size: 32px;
+    font-size: 16px;
 }
 
 /* .rem2 depends on html font-size, ignore container font-size  */
