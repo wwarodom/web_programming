@@ -41,12 +41,31 @@ header span {
     box-shadow: 4px 4px 4px #000; 
 }
 
+.menu {
+    display: none;
+}
+
+.line {
+    width: 2em;
+    height: 5px;
+    background: grey;
+    margin-top: 6px;
+}
+
 @media screen and (min-width: 600px) {
     .container {
         display: flex;
     }
     .card-hide {
         display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        display: block;
     }
 }
 
@@ -58,4 +77,7 @@ header span {
     .card-hide {
         display: block;
     }
+
+
+ 
 }
