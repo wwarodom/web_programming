@@ -19,7 +19,7 @@
         <div class="menu">
             <span>Menu1</span><span>Menu2</span><span>Help</span>
         </div>
-        <div class="hamburger"> 
+        <div class="hamburger" onClick="showMenu()"> 
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -58,6 +58,22 @@
         </aside>
     </div>
     <footer>Footer</footer>
+
+    <div class="drawer" id="drawer">
+        <a href="#">Menu1</a>
+        <a href="#">Menu2</a>
+        <a href="#">Menu3</a>
+        <button onclick="closeMenu()">Close</button>
+    </div>
+ 
+    <script>
+        function showMenu() {
+            document.getElementById("drawer").style.left = "0px";
+        }
+        function closeMenu() {
+            document.getElementById("drawer").style.left = "-300px";
+        }
+    </script>
 </body>
 
 
