@@ -25,7 +25,7 @@ export default function Product() {
 
     return (
         <div className="flex flex-col items-center">
-            <h1>Product</h1>
+            <h1 className="text-3xl mb-8">Product</h1>
             <ul className="flex justify-center gap-4 flex-wrap w-full">
                 {products.map((item, index) =>
                     <ProductItem
