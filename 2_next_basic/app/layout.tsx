@@ -6,7 +6,7 @@ import Foot from "@/components/foot";
 
 const sarabun = Sarabun({
   weight: '400',
-  subsets:['thai']
+  subsets: ['thai']
 })
 
 export const metadata: Metadata = {
@@ -25,7 +25,9 @@ export default function RootLayout({
         className={`${sarabun.className}`}
       >
         <Head />
-        {children}
+        <main>
+          {children}
+        </main>
         <Foot />
       </body>
     </html>

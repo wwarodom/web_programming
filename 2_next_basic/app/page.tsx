@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Home() {
-  return (<>
-    <h1 className="text-3xl">Hello world! </h1>
-    <p>Lorem ipsum dolor sit amet.</p>
-    </>)
+  return (<div className="min-h-64">
+    <h1 className="text-3xl">Index page</h1> 
+    <Link href="/product">Product</Link>
+    </div>)
 }
