@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Sarabun } from "next/font/google"
 import "./globals.css";
+import Head from '../components/head'
+import Foot from "@/components/foot";
 
 const sarabun = Sarabun({
   weight: '400',
@@ -22,7 +24,9 @@ export default function RootLayout({
       <body
         className={`${sarabun.className}`}
       >
+        <Head />
         {children}
+        <Foot />
       </body>
     </html>
   );
