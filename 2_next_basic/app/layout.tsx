@@ -24,11 +24,11 @@ export default function RootLayout({
       <body
         className={`${sarabun.className}`}
       >
-        <Head />
+        {/* <Head /> */}
         <main>
           {children}
         </main>
-        <Foot />
+        {/* <Foot /> */}
       </body>
     </html>
   );
