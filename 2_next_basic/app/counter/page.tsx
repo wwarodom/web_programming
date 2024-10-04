@@ -5,8 +5,8 @@ export default function Counter() {
 
     const [num, setNum] = useState(1) // React hook
 
-    function add() { 
-        setNum(num+1)
+    function add() {
+        setNum(num + 1)
         console.log("Num: ", num)
     }
     return (<>
@@ -18,7 +18,7 @@ export default function Counter() {
         </button>
         <button
             className="border-2 border-black p-2 ml-2"
-            onClick={() => (setNum(num-1))}
+            onClick={() => (setNum(num - 1))}
         >-
         </button>
         <button
