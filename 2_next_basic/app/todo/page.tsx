@@ -4,19 +4,17 @@
 'use client'
 
 import { useState } from "react"
-
-const tasks = [
-    { id: 1, name: "Read a book", time: 20 },
-    { id: 2, name: "write a program", time: 40 },
-    { id: 3, name: "Sleep is the best", time: 90 },
-]
-
 // show tasks on the browser
 
 export default function Todo() {
     // Create 2 state variables called 'name' , 'time'  
     const [name, setName] = useState('')
     const [time, setTime] = useState(0)
+    const [tasks, setTasks] = useState([
+        { id: 1, name: "Read a book", time: 20 },
+        { id: 2, name: "write a program", time: 40 },
+        { id: 3, name: "Sleep is the best", time: 90 },
+    ])
 
     // javascript tradition function
     function foo1() {
@@ -34,6 +32,15 @@ export default function Todo() {
     const foo4 = () => "foo4"
 
     console.log(`${foo1() + foo2() + foo3() + foo4()}`)
+
+
+    function addTask() {
+        setTasks( [...tasks , {
+            id: tasks[tasks.length - 1].id + 1, 
+            name: name,
+            time: time,
+        }])
+    }
 
     return <>
         <h1>Todo</h1>
@@ -60,5 +67,10 @@ export default function Todo() {
             onChange={(e) => setTime(+e.target.value)}
             type="number"
         />
+        <br />
+        <button
+            className="border-2 border-black m-1 p-2"
+            onClick={addTask}
+        >Add</button>
     </>
 }
