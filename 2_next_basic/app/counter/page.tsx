@@ -1,12 +1,14 @@
 'use client'
 
-import { useState } from "react"
+// import { useState } from "react"
 export default function Counter() {
 
-    const [num, setNum] = useState(1) // React hook
+    let num = 8;
+    // const [num, setNum] = useState(1) // React hook
 
     function add() {
-        setNum(num + 1)
+        // setNum(num + 1)
+        num = num+1;
         console.log("Num: ", num)
     }
     return (<>

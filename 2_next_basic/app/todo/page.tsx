@@ -35,10 +35,9 @@ export default function Todo() {
 
 
     function addTask() {
-        setTasks( [...tasks , {
-            id: tasks[tasks.length - 1].id + 1, 
-            name: name,
-            time: time,
+        setTasks([...tasks,
+        {
+            id: tasks[tasks.length - 1].id + 1, name, time
         }])
     }
 
