@@ -35,10 +35,13 @@ export default function Todo() {
 
 
     function addTask() {
-        setTasks([...tasks,
-        {
-            id: tasks[tasks.length - 1].id + 1, name, time
-        }])
+        // let id:number;
+        // if (tasks.length === 0)
+        //     id = 1
+        // else
+        //     id = tasks[tasks.length - 1].id + 1
+        const id = (!tasks.length) ? 1 : tasks[tasks.length - 1].id + 1
+        setTasks([...tasks, { id, name, time }])
     }
 
     function deleteTask(id: number) {
@@ -57,6 +60,13 @@ export default function Todo() {
                         onClick={() => deleteTask(item.id)} >
                         delete
                     </button>
+                    <button
+                        className="border-2 border-black m-2 p-1"
+                        onClick={() => editTask(item.id)} >
+                        edit
+                    </button>
+
+
                 </li>)}
         </ul>
         <br />
