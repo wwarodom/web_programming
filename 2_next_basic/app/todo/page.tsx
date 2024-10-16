@@ -63,6 +63,10 @@ export default function Todo() {
         temp[editId].name = name
         temp[editId].time = time
         setTasks([...temp])
+
+        setEditId(-1)
+        setName("")
+        setTime(0)
     }
 
     return <>
@@ -88,7 +92,7 @@ export default function Todo() {
         <br />
         <hr />
         {/* Create 2 input textbox for name & time */}
-        <h1>Add task</h1>
+        <h1>Add task</h1> 
         Name: {name} <br />
         Time: {time} <br />
         <input
