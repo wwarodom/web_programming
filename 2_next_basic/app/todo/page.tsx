@@ -15,6 +15,8 @@ export default function Todo() {
         { id: 2, name: "write a program", time: 40 },
         { id: 3, name: "Sleep is the best", time: 90 },
     ])
+    const [editId, setEditId] = useState(-1)
+
 
     // javascript tradition function
     function foo1() {
@@ -49,6 +51,20 @@ export default function Todo() {
         setTasks([...temp])
     }
 
+    function editTask(id: number) {
+        const taskIndex = tasks.findIndex(item => item.id === id)
+        setEditId(taskIndex)
+        setName(tasks[taskIndex].name)
+        setTime(tasks[taskIndex].time)
+    }
+
+    function updateTask() {
+        const temp = tasks;
+        temp[editId].name = name
+        temp[editId].time = time
+        setTasks([...temp])
+    }
+
     return <>
         <h1>Todo</h1>
         <ul>
@@ -77,19 +93,24 @@ export default function Todo() {
         Time: {time} <br />
         <input
             className="border-2 border-black m-1 text-xl"
+            value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
         />
         <br />
         <input
             className="border-2 border-black m-1 text-xl"
+            value={time}
             onChange={(e) => setTime(+e.target.value)}
             type="number"
         />
         <br />
+
         <button
             className="border-2 border-black m-1 p-2"
-            onClick={addTask}
-        >Add</button>
+            onClick={(editId === -1) ? addTask : updateTask}
+        >
+            {(editId === -1) ? "Add new" : "update Task" }
+        </button>
     </>
 }
