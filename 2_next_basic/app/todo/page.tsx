@@ -41,12 +41,22 @@ export default function Todo() {
         }])
     }
 
+    function deleteTask(id: number) {
+        const temp = tasks.filter((item) => item.id !== id)
+        setTasks([...temp])
+    }
+
     return <>
         <h1>Todo</h1>
         <ul>
             {tasks.map((item) =>
                 <li key={item.id}>
-                    {item.name} : {item.time}
+                    {item.id} : {item.name} : {item.time}
+                    <button
+                        className="border-2 border-black m-2 p-1"
+                        onClick={() => deleteTask(item.id)} >
+                        delete
+                    </button>
                 </li>)}
         </ul>
         <br />
