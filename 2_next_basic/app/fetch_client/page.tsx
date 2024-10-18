@@ -44,7 +44,7 @@ export default function MyFetch() {
         {/* {JSON.stringify(data)} */}
 
         {data.map((item) =>
-            <div key={item.id}>{item.id} | {item.title} </div>
+            <div key={item.id}>{item.id} | {item.title} | {item.content} </div>
         )}
         {/* <Image src={url}
             height={200} width={200}
