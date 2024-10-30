@@ -1,5 +1,7 @@
 'use server'
 
-export default async function createMessage(formData: FormData) {
-    console.log("Message: ", formData.get("message") )
+export default async function createMessage(previous: unknown, formData: FormData) {
+    const message =  formData.get("message")
+    console.log("Message: ", message)
+    return message
 } 
