@@ -13,7 +13,6 @@ type PostType = {
     category: string, 
 }
 
-
 export default function MyFetch() {
 
     // const [url, setUrl] = useState('')
