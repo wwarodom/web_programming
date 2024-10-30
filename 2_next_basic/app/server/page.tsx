@@ -10,7 +10,7 @@ export default function Server() {
     return (
         <div>
             <h1>Result: </h1>
-            <div>{state}</div>
+            <div>{ JSON.stringify(state)}</div>
             <hr />
             <br />
             <h1>Server Form</h1>
