@@ -24,6 +24,13 @@ export default function Server() {
                         className={style}
                         type="text" name="message" />
                 </div>
+                <div>
+                    <label
+                        htmlFor="email">Email </label>
+                    <input
+                        className={style}
+                        type="email" name="email" />
+                </div>
                 <button
                     type="submit"
                     className={style}
