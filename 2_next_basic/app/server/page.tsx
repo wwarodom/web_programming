@@ -20,6 +20,8 @@ export default function Server() {
                         htmlFor="message">Message </label>
                     <input
                         className={style}
+                        min={3}
+                        max={10}
                         type="text" name="message" />
                 </div>
                 <div>
