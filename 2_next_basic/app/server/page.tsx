@@ -6,7 +6,7 @@ import createMessage from "./_actions/createMessage"
 const style = `border-black border-2 p-1 m-1`
 
 export default function Server() {
-    const [state, action] = useFormState(createMessage, "Init state")
+    const [state, action] = useFormState(createMessage, {})
     return (
         <div>
             <h1>Result: </h1>
@@ -20,16 +20,21 @@ export default function Server() {
                         htmlFor="message">Message </label>
                     <input
                         className={style}
-                        min={3}
-                        max={10}
-                        type="text" name="message" />
+                       
+                        type="text" name="message" /> 
+                    {
+                       ( state?.errors) && <span className="text-red-600">{state?.errors.message[0]}</span> 
+                    }
                 </div>
                 <div>
                     <label
                         htmlFor="email">Email </label>
                     <input
                         className={style}
-                        type="email" name="email" />
+                        type="text" name="email" />
+                     {
+                       ( state?.errors) && <span className="text-red-600">{state?.errors.email[0]}</span> 
+                    }
                 </div>
                 <SubmitButton />
             </form>
