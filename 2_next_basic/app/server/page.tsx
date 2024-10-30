@@ -1,10 +1,12 @@
+import createMessage from "./_actions/createMessage"
+
 const style = `border-black border-2 p-1 m-1`
 
 export default function Server() {
     return (
         <div>
             <h1>Server Form</h1>
-            <form action="">
+            <form action={createMessage}>
                 <div>
                     <label 
                         htmlFor="message">Message </label>
