@@ -1,14 +1,12 @@
 'use client'
 
-import { useFormState } from "react-dom"
+import { useFormState, useFormStatus } from "react-dom"
 import createMessage from "./_actions/createMessage"
 
 const style = `border-black border-2 p-1 m-1`
 
 export default function Server() {
-
     const [state, action] = useFormState(createMessage, "Init state")
-
     return (
         <div>
             <h1>Result: </h1>
@@ -31,12 +29,22 @@ export default function Server() {
                         className={style}
                         type="email" name="email" />
                 </div>
-                <button
-                    type="submit"
-                    className={style}
-                >Submit</button>
+                <SubmitButton />
             </form>
 
         </div>
+    )
+}
+
+function SubmitButton() {
+    const { pending } = useFormStatus() // pending = true means still process on the server
+
+    return (<button
+        disabled={pending}
+        type="submit"
+        className={style}
+    >
+        Submit{pending && "..."}
+    </button>
     )
 }
