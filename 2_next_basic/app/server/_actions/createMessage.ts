@@ -6,25 +6,24 @@ const schema = z.object({
     message: z.string({
         invalid_type_error: 'Invalid Message',
     }).min(3).max(10) ,
+    email: z.string().email(),
 })
 
 export default async function createMessage(previous: unknown, formData: FormData) {
 
-    const data = schema.safeParse({
+    const result = schema.safeParse({
         message: formData.get('message'),
+        email: formData.get('email'),
     })
 
-    if (!data.success) {
+    if (!result.success) {
         return {
-            errors: data.error.flatten().fieldErrors,
+            errors: result.error.flatten().fieldErrors,
         }
     }
 
-    const { message } = data
-    console.log("Data: ", data)
-
-    // const message = formData.get("message")
-    const email = formData.get("email")
+    const { message, email } = result.data
+    console.log("Data: ", result.data)
 
     console.log("Before processing")
     await wait(500)
