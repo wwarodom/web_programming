@@ -18,6 +18,12 @@ export default async function Page() {
         revalidatePath('/simple_db')
     }
 
+    async function deleteTask(id: string) {
+        "use server"
+        await prisma.todo.delete( { where: {id}} )
+        revalidatePath("/sample_db")
+    }
+
     return (
         <div>
             <h1>Sample DB</h1>
@@ -30,6 +36,7 @@ export default async function Page() {
                         id={item.id} 
                         title={item.title} 
                         done={item.done} 
+                        deleteTask={deleteTask}
                     />
                 ))}
             </div>
