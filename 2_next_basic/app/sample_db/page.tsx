@@ -1,3 +1,4 @@
+import TodoItem from "@/components/TodoItem";
 import prisma from "@/utils/db"
 import { revalidatePath } from "next/cache";
 
@@ -22,11 +23,14 @@ export default async function Page() {
             <h1>Sample DB</h1>
             {/* {JSON.stringify(data) } */}
             <div>
-                {data.map( (item) => (
-                    <div key={item.id}>{item.title} 
-                    : 
-                    {(item.done)?"Yes":"No"}
-                    </div>
+                {data.map( (item, index) => (
+                    <TodoItem 
+                        key={index}
+                        index={index}
+                        id={item.id} 
+                        title={item.title} 
+                        done={item.done} 
+                    />
                 ))}
             </div>
 
