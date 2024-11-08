@@ -2,6 +2,8 @@ import TodoItem from "@/components/TodoItem";
 import prisma from "@/utils/db"
 import { revalidatePath } from "next/cache";
 
+const STYLE = `border-2 border-black mx-1 p-1 drop-shadow-md rounded-md`
+
 export default async function Page() {
 
     // const title = "My Test title "
@@ -24,6 +26,12 @@ export default async function Page() {
         revalidatePath("/sample_db")
     }
 
+    async function toggleTask(id: string, done: boolean) {
+        "use server"
+        await prisma.todo.update({ data: {done}, where: {id} })
+        revalidatePath("/sample_db")
+    }
+
     return (
         <div>
             <h1>Sample DB</h1>
@@ -37,16 +45,18 @@ export default async function Page() {
                         title={item.title} 
                         done={item.done} 
                         deleteTask={deleteTask}
+                        toggleTask={toggleTask}
                     />
                 ))}
             </div>
 
             <hr />
+            <br />
             <div>
                 <h2>Add task</h2>
                 <form action={createTask}>
-                    <input className="border-2 border-black" type="text" name="title" />
-                    <button type="submit">Add</button>
+                    <input className={STYLE} type="text" name="title" />
+                    <button className={STYLE} type="submit">Add</button>
                 </form>
             </div>
         </div>
