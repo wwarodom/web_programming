@@ -1,8 +1,7 @@
 import prisma from "@/utils/db";
 import { redirect } from "next/navigation";
 
-// import STYLE from "../constants/style"
-const STYLE = `border-2 border-black mx-1 p-1 drop-shadow-md rounded-md`
+import STYLE from "../../../constants/style"
 
 export default function EditTitle({ searchParams }: {
     searchParams: { id: string; title: string }

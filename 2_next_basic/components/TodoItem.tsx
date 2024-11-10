@@ -1,8 +1,7 @@
 "use client"
 
 import Link from "next/link";
-// import STYLE from "../constants/style"
-const STYLE = `border-2 border-black mx-1 p-1 drop-shadow-md rounded-md`
+import STYLE from "../constants/style"
 
 export default function TodoItem({ index, id, title, done, deleteTask, toggleTask }: {
     index: number;

@@ -1,9 +1,8 @@
 import TodoItem from "@/components/TodoItem";
 import prisma from "@/utils/db"
 import { revalidatePath } from "next/cache";
-// import STYLE from "../../constants/style"
-const STYLE = `border-2 border-black mx-1 p-1 drop-shadow-md rounded-md`
- 
+import STYLE from "../../constants/style"
+
 export default async function Page() {
 
     // const title = "My Test title "
