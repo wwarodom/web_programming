@@ -48,7 +48,7 @@ export default async function login(prevState: unknown, formData: FormData):
 
         if (user) {
             console.log("User found:", user);
-            // === Todo 4: Verify user credential ===
+            // === Todo 5: Verify user credential ===
             // if (await isValidPassword(password, user.password)) {
             //     console.log("Right pass")
             //     return await loginUser(user, remember);

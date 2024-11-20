@@ -10,12 +10,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
  
+// === Todo 1: add one to many relation === 
 model User {
   id       Int    @id @default(autoincrement())
   email    String @unique
   name     String
   password String
-  posts    Post[]
+  // posts    Post[]
 }
 
 model Post {
@@ -23,7 +24,7 @@ model Post {
   subject   String
   detail    String
   userId    Int
-  user      User     @relation(fields: [userId], references: [id])
+  // user      User     @relation(fields: [userId], references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

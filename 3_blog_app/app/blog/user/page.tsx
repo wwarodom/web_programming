@@ -4,7 +4,7 @@ import Link from "next/link";
 export default async function User() {
     let users;
     try {
-        // === Todo 2: Get user ===
+        // === Todo 3: Get user ===
         // users = await prisma.user.findMany()
 
     } catch (error) {

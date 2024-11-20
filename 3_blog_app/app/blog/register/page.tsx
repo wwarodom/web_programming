@@ -35,7 +35,7 @@ export default function Register() {
                     {data.error?.password && <div className="text-red-600">{data.error?.password[0]}</div>}
                 </div>
 
-                {/* Todo 3: add new user with validation
+                {/* === Todo 4: add new user with validation ===
                 <div>
                     {data.error?.message && <div className="text-red-600">{data.error?.message}</div>}
                 </div> */}

@@ -8,6 +8,8 @@ export async function middleware(request: NextRequest) {
     return res
   else 
     return NextResponse.redirect(new URL("/blog/login", request.url))
+
+  // === Short coing style
   // return (await updateSession(request)) || NextResponse.redirect(new URL("/blog/login", request.url));
 }
 
