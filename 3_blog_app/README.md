@@ -10,12 +10,14 @@ This example demostrates basic features as follows:
 * UI ShadCN and layout
 
 ### Installation
+```
 git clone https://github.com/wwarodom/web_programming.git
 cd web_programming/3_blog_app
 npm i
 ren .env.sample .env   # ( using ‘mv .env.sample .env’ for mac/linux)
 npx prisma migrate dev --name blog_app
 npm run dev
+```
 
 ##### Missing parts: 
 - CRUD users
