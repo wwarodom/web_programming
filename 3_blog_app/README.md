@@ -25,3 +25,7 @@ Model example: https://www.prisma.io/docs/orm/prisma-schema/data-model/models
 ```
 npx prisma migrate reset
 ```
+
+##### Missing part: 
+- CRUD users
+- Routing from editing message to blog-ui (not blog)

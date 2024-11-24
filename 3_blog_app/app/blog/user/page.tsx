@@ -4,8 +4,7 @@ import Link from "next/link";
 export default async function User() {
     let users;
     try {
-        // === Todo 3: Get user ===
-        // users = await prisma.user.findMany()
+        users = await prisma.user.findMany()
 
     } catch (error) {
         console.log(error)
@@ -22,7 +21,7 @@ export default async function User() {
                         <th>name</th>
                     </tr>
                 </thead>
-                {/* <tbody>
+                <tbody>
                     {
                         users?.map(user => (
                             <tr key={user.id}>
@@ -32,7 +31,7 @@ export default async function User() {
                             </tr>
                         ))
                     }
-                </tbody> */}
+                </tbody>
             </table>
             <br /><hr /><br />
             <Link href="/blog">Back</Link>

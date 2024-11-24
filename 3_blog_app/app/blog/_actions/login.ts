@@ -48,15 +48,14 @@ export default async function login(prevState: unknown, formData: FormData):
 
         if (user) {
             console.log("User found:", user);
-            // === Todo 5: Verify user credential ===
-            // if (await isValidPassword(password, user.password)) {
-            //     console.log("Right pass")
-            //     return await loginUser(user, remember);
-            // }
-            // else {
-            //     console.log("Wrong pass")
-            //     return { error: { message: "Incorrect user or password" } }
-            // }
+            if (await isValidPassword(password, user.password)) {
+                console.log("Right pass")
+                return await loginUser(user, remember);
+            }
+            else {
+                console.log("Wrong pass")
+                return { error: { message: "Incorrect user or password" } }
+            }
         } else {
             console.log("No user found with that email.");
             return { error: { message: "Cannot find a user" } }

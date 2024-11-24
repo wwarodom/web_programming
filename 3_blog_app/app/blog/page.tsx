@@ -13,20 +13,19 @@ export default async function Blog() {
         },
     });
 
-    
-    // const user = await getSession()
+    const user = await getSession()
 
     return (<>
         <nav className="flex justify-between mb-4">
             <div>Blog</div>
-            {/* <div>
+            <div>
                 {user ?
                     <>Hello: {user.name} | <Logout /> </> :
                     <>
                         <Link className="mr-2" href="/blog/login">Login</Link>|
                         <Link className="ml-2" href="/blog/register">Register</Link>
                     </>}
-            </div> */}
+            </div>
         </nav>
 
         <hr /> <br />
@@ -37,7 +36,7 @@ export default async function Blog() {
                     <hr />
                     <div className="min-h-24 mt-2">{post.detail}</div>
                     <div>By: {post.user.name}</div>
-                    {/* {user ?
+                    {user ?
                         <>
                             <Link href={{
                                 pathname: '/blog/edit',
@@ -52,21 +51,19 @@ export default async function Blog() {
                             />
                         </>
                         :
-                        ""} */}
+                        ""}
                 </div>
             ))}
         </div>
 
-        <Link href="/blog/new"
-            className="border-2 border-black p-2 m-2 rounded-lg">
+        <Link href="/blog/new" className={`${style} border-indigo-800 mr-2 rounded-md`}>
             New
         </Link>
-        <Link href="/blog/user"
-            className="border-2 border-black p-2 m-2 rounded-lg">
+        <Link href="/blog/user" className={`${style} border-indigo-800 mr-2 rounded-md`}>
             User
         </Link>
-        <Link href="/"
-            className="border-2 border-black p-2 m-2 rounded-lg"
-        >Home</Link>
+        <Link href="/" className={`${style} border-indigo-800 rounded-md`}>
+            Home
+        </Link>
     </>)
 }

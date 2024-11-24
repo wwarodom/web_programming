@@ -1,6 +1,6 @@
 "use server"
 
-import { SignJWT, jwtVerify } from "jose";
+import { SignJWT, jwtVerify } from "jose"; 
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -27,7 +27,7 @@ export async function decrypt(input: string): Promise<any> {
 export async function loginUser(userInput:any, remember: boolean) { 
   const {id, email, name} = userInput; 
 
-  let timeout = TIMEOUT
+  let timeout = TIMEOUT // default 5 mins
   if (remember)
     timeout = 24*60*60;
   // Create the session
@@ -42,7 +42,7 @@ export async function loginUser(userInput:any, remember: boolean) {
 export async function logoutUser() {
   // Destroy the session 
   // cookies().set("session", "", { expires: new Date(0) });
-  cookies().delete('session')
+  cookies().delete('session') 
   return { message: "Logout Success" }
 }
 

@@ -14,9 +14,10 @@ export default function Edit({ searchParams }:
 
   const [data, action] = useFormState(updatePost, {})
 
-  if (data.message) { 
+  if (data.message) {
     redirect("/blog")
   }
+
   return (
     <>
       Edit

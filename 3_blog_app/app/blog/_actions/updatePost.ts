@@ -1,6 +1,7 @@
 "use server"
 
 import prisma from "@/utils/db"
+import { getSession } from "@/utils/loginUser";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
@@ -24,8 +25,11 @@ export default async function updatePost(prevState: unknown, formData: FormData)
         error?: fieldErrors
     }> {
 
-    console.log("Subject: " + formData.get("subject") +
-        formData.get("detail1"))
+    // console.log("Subject: " + formData.get("subject") +
+    //     formData.get("detail1"))
+
+    const user = await getSession()
+    if (!user) return { error: { message: "session-expired, please re-login" } }
 
     const result = addSchema.safeParse(Object.fromEntries(formData.entries()))
     if (result.success === false) {
@@ -52,5 +56,5 @@ export default async function updatePost(prevState: unknown, formData: FormData)
         return { error: { message: error + "" } }
     }
     revalidatePath("/blog")
-    return { message: "Update post successful" }
+    return { message: "success" }
 }
