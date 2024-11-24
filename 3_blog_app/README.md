@@ -18,3 +18,8 @@ ren .env.sample .env   # ( using ‘mv .env.sample .env’ for mac/linux)
 npx prisma migrate dev --name blog_app
 npm run dev
 ```
+
+#### Seed data
+```
+http://localhost:3000/blog/seed
+```

@@ -12,5 +12,5 @@ Model example: https://www.prisma.io/docs/orm/prisma-schema/data-model/models
 
 ```
 npx prisma migrate reset
-npx prisma migrate dev --name blog
+npx prisma migrate dev --name blog_app
 ```
