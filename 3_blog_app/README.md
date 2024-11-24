@@ -18,7 +18,3 @@ ren .env.sample .env   # ( using ‘mv .env.sample .env’ for mac/linux)
 npx prisma migrate dev --name blog_app
 npm run dev
 ```
-
-##### Missing functions: 
-- CRUD users
-- Routing from editing message to blog-ui (not blog)
