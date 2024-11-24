@@ -19,6 +19,6 @@ npx prisma migrate dev --name blog_app
 npm run dev
 ```
 
-##### Missing parts: 
+##### Missing functions: 
 - CRUD users
 - Routing from editing message to blog-ui (not blog)
