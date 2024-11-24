@@ -3,7 +3,7 @@
 This example demostrates basic features as follows:
 * The prisma CRUD 1-Many relation 
 * useFormState and useFormStatus with server actions
-* session with JWT stored in cookie-httpOnly 
+* session with JWT, stored in httpOnly-cookie 
 * middleware and matcher for route protection
 * form validation with zod library
 * server and client components design
